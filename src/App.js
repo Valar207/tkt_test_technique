@@ -30,8 +30,8 @@ function App() {
     if (!loaded) {
       axios
         .get(urlBusinessList)
-        .then(async (res) => {
-          tmpAllInfos = await res.data
+        .then((res) => {
+          tmpAllInfos = res.data
             .sort((a, b) => {
               if (a.name < b.name) return -1;
               if (a.name > b.name) return 1;
